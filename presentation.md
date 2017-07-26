@@ -1,17 +1,41 @@
-footer: © Unsigned Integer UG, 2017
-slidenumbers: false
-
 # Getting Hooked on Vue.js
 
-### Everything you need to know to start making presentations
+# <br>
+# <br>
+# <br>
+
+### Dalton Mitchell
+### Software Engineer @ Riskalyze
+### @daltonamitchell / daltonmitchell.com
 
 ---
 
-# Vue.js
+# Getting Hooked on Vue.js
 
-^ What is Vue
-^ A web framework
-^ Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is very easy to pick up and integrate with other libraries or existing projects.
+# <br>
+# <br>
+# <br>
+
+### Dalton Mitchell
+### Software Engineer @ Riskalyze
+### @daltonamitchell / daltonmitchell.com
+### We're hiring! - Riskalyze.com/careers
+
+---
+
+# A little about Vue.js
+
+^ - What is Vue?
+- A web framework.
+- Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is very easy to pick up and integrate with other libraries or existing projects.
+
+---
+
+# My experience...
+
+^ Talk about my experience
+- Skeptical
+- Talk about project constraints
 
 ---
 
@@ -22,10 +46,10 @@ slidenumbers: false
 - Performant
 - Incrementally adoptable
 
-^ Flexible: Use with or without build tools, with any app structure you like
-^ Lightweight: 19kb GZipped
-^ Performant
-^ Incrementally adoptable
+^ - Flexible: Use with or without build tools, with any app structure you like
+- Lightweight: 19kb GZipped
+- Performant
+- Incrementally adoptable
 
 ---
 
@@ -35,12 +59,11 @@ slidenumbers: false
 
 ---
 
-
 # What this talk is NOT about
 
 ### Teaching you everything you need to know about Vue.js
 
-#### www.vuejs.org
+#### VueJS.org is a great place to learn all the things! 🤓
 
 ---
 
@@ -49,7 +72,6 @@ slidenumbers: false
 - Vue Instance
 - Vue Component
 - Single File Components
-- Vuex
 
 ---
 
@@ -135,8 +157,8 @@ new Vue({
 })
 ```
 
-^ computed prop are similar to data, except they change dynamically based on other values.
-^ computed properties are cached based on their dependencies. So they only re-evaluate when one of their dependencies change
+^ - computed prop are similar to data, except they change dynamically based on other values.
+- computed properties are cached based on their dependencies. So they only re-evaluate when one of their dependencies change
 
 ---
 
@@ -165,8 +187,8 @@ new Vue({
 })
 ```
 
-^ Methods allow us to define functions that can be executed from our template.
-^ Within a method, we have access to data variables, but it's usually preferred to pass in data directly
+^ - Methods allow us to define functions that can be executed from our template.
+- Within a method, we have access to data variables, but it's usually preferred to pass in data directly
 
 ---
 
@@ -197,13 +219,15 @@ new Vue({
 })
 ```
 
-^ Explain what v-model does
-^ Watchers allow us to specify some behavior that happens when our data changes. They differ from computed properties in that they don't need to return a value
-^ You probably want a watcher if you explicitly need a side effect
+^ - Explain what v-model does
+- Watchers allow us to specify some behavior that happens when our data changes. They differ from computed properties in that they don't need to return a value
+- You probably want a watcher if you explicitly need a side effect
 
 ---
 
-# Hacker News Clone
+# Building a Hacker News Clone
+
+---
 
 ```html
 <!DOCTYPE html>
@@ -235,8 +259,6 @@ new Vue({
 ```
 
 ---
-
-# Hacker News Clone
 
 ```html
 <!DOCTYPE html>
@@ -271,8 +293,6 @@ new Vue({
 
 ---
 
-# Hacker News Clone
-
 ```html
 <!DOCTYPE html>
 <html>
@@ -296,8 +316,6 @@ new Vue({
 
 ---
 
-# Hacker News Clone
-
 ```html
 <!DOCTYPE html>
 <html>
@@ -310,14 +328,12 @@ new Vue({
     </div>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script></script>
+    <script>...</script>
   </body>
 </html>
 ```
 
 ---
-
-# Hacker News Clone
 
 ```html
 <!DOCTYPE html>
@@ -355,8 +371,6 @@ new Vue({
 
 ---
 
-# Hacker News Clone
-
 ```javascript
 const posts = [{
     "description": "The official Vue.js guide",
@@ -380,9 +394,10 @@ const posts = [{
   }]
 ```
 
----
+^ Let's add our the ability to upvote posts.
+- We'll start by adding a "votes" field to our data
 
-# Hacker News Clone
+---
 
 ```html
 <ul class="posts">
@@ -396,9 +411,9 @@ const posts = [{
 </ul>
 ```
 
----
+^ And then display the votes
 
-# Hacker News Clone
+---
 
 ```javascript
 const app = new Vue({
@@ -413,6 +428,9 @@ const app = new Vue({
   }
 })
 ```
+
+^ - Now we can easily sort by number of votes
+- We should use a computed property to observe changes as votes change
 
 ---
 
@@ -461,6 +479,9 @@ const posts = [{
   }]
 ```
 
+^ - We need to know which button was click so we can record the correct vote
+ - We should probably have an id field to help us with that
+
 ---
 
 ```html
@@ -475,6 +496,9 @@ const posts = [{
 </ul>
 ```
 
+^ - Now we can pass that id into an `upvote` method
+- Explain what `:key` does
+
 ---
 
 ```html
@@ -488,6 +512,8 @@ const posts = [{
   </li>
 </ul>
 ```
+
+^ Explain alternative `v-bind` syntax
 
 ---
 
@@ -510,6 +536,8 @@ const app = new Vue({
   }
 })
 ```
+
+^ Build the `upvote` method
 
 ---
 
@@ -625,9 +653,9 @@ Vue.component('my-component', {
 })
 ```
 
-^ Components can take most of the same properties as a normal instance
-^ One exception is the data property
-^ In a component, data must be a function that returns the data object
+^ - Components can take most of the same properties as a normal instance
+- One exception is the data property
+- In a component, data must be a function that returns the data object
 
 ---
 
@@ -648,8 +676,8 @@ Vue.component('child', {
 })
 ```
 
-^ Components can take props from their parent
-^ You must explicitly declare the props your component expects
+^ - Components can take props from their parent
+- You must explicitly declare the props your component expects
 
 ---
 
@@ -699,7 +727,9 @@ Vue.component('child', {
 
 ---
 
-# Hacker News Clone
+# Refactoring our app with components
+
+---
 
 ```html
 <div id="app">
@@ -733,9 +763,9 @@ const app = new Vue({
 })
 ```
 
----
+^ Build the Nav component
 
-# Hacker News Clone
+---
 
 ```html
 <div id="app">
@@ -773,6 +803,8 @@ Vue.component('post-list', {
   }
 })
 ```
+
+^ Build the PostList component
 
 ---
 
@@ -814,6 +846,8 @@ Vue.component('post', {
   }
 })
 ```
+
+^ Build the Post component
 
 ---
 
@@ -870,6 +904,8 @@ Vue.component('post-list', {
 })
 ```
 
+^ Explain how the parent listens for and handles the event
+
 ---
 
 # Next, the child needs to fire the event
@@ -891,6 +927,8 @@ Vue.component('post', {
 })
 ```
 
+^ Explain how the child sends the event
+
 ---
 
 # Single File Components
@@ -907,8 +945,10 @@ Using the Webpack ```vue-loader``` we can create components which have their tem
 - Speed up development
 - Works with build tools such as Babel and preprocessors
 
-^ We can now write HTML & CSS locally scoped to our component which is really helpful for moving quickly and designing our app features as we build them
-^ We can have all the power of Babel, SASS, Pug or anything else that makes us more productive
+^ - We can now write HTML & CSS locally scoped to our component which is really helpful for moving quickly and designing our app features as we build them
+- We can have all the power of Babel, SASS, Pug or anything else that makes us more productive
+- We can spend time thinking about our app.
+- "What components do I need?" vs "where should I put this?"
 
 ---
 
@@ -948,7 +988,11 @@ export default {
 
 ---
 
-# Hacker News Clone
+# A little more refactoring...
+
+---
+
+# Install Vue CLI
 
 ```bash
 yarn global add vue-cli
@@ -957,7 +1001,7 @@ vue init webpack-simple hn-clone
 
 ---
 
-# Hacker News Clone
+# Start the development server
 
 ```bash
 yarn
@@ -966,9 +1010,35 @@ yarn dev
 
 ---
 
-# Hacker News Clone
+# Demo
 
-```bash
-yarn
-yarn dev
-```
+---
+
+# What have I learned
+
+---
+
+# What have I learned
+
+1. We should care about the beginner experience
+2. Documentation matters
+3. You can have power without adding bloat
+
+---
+
+# What I'd like to see more of
+
+1. Better onboarding
+2. Better docs
+3. Smaller, focused libs that play well with others
+
+---
+
+# Thank you!
+
+# <br>
+# <br>
+# <br>
+
+## Dalton Mitchell
+### @daltonamitchell / daltonmitchell.com
