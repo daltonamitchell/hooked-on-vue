@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #ff6600;
+  padding: 2px;
+  margin-bottom: 8px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+.text-gray {
+  color: #828282;
+}
+
+.text-small {
+  font-size: 11px;
+}
+
+#app {
+  max-width: 85%;
+  margin: 0 auto;
+  background-color: #f6f6ef;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.post {
+  padding: 2px;
+}
+
+.upvote {
+  cursor: pointer;
+}
