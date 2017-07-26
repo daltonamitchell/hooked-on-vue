@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "description": "The official Vue.js guide",
+    "url": "https://vuejs.org",
+    "votes": 73
+  },
+  {
+    "id": 1,
+    "description": "Vue Router: Dead simple routing for Vue apps",
+    "url": "https://router.vuejs.org",
+    "votes": 38
+  },
+  {
+    "id": 2,
+    "description": "Vuex: A state management library for Vue",
+    "url": "https://vuex.vuejs.org",
+    "votes": 115
+  },
+  {
+    "id": 3,
+    "description": "A most magnificent developer 😎",
+    "url": "https://daltonmitchell.com",
+    "votes": 64
+  }
+]
